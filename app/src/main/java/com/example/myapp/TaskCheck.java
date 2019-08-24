@@ -102,10 +102,12 @@ public class TaskCheck extends AppCompatActivity {
                         if (score >= 70) {
 
                             showSuccessMessage();
+                            updatescore(score);
                         }
 
                         else {
                             showUncompletedMessage();
+                            updatescore(score);
                         }
 
 
@@ -158,7 +160,7 @@ public class TaskCheck extends AppCompatActivity {
 
                     textViewOne.setBackgroundColor(0xFFFF0000);
 
-                    Toast.makeText(getApplicationContext(),"Wrong Answer",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Wrong Answer",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -179,7 +181,7 @@ public class TaskCheck extends AppCompatActivity {
 
                     textViewTwo.setBackgroundColor(0xFFFF0000);
 
-                    Toast.makeText(getApplicationContext(),"Wrong Answer",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Wrong Answer",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -199,7 +201,7 @@ public class TaskCheck extends AppCompatActivity {
                 } else {
                     textViewThree.setBackgroundColor(0xFFFF0000);
 
-                    Toast.makeText(getApplicationContext(),"Wrong Answer",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Wrong Answer",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -218,7 +220,7 @@ public class TaskCheck extends AppCompatActivity {
 
                 } else {
                     textViewFour.setBackgroundColor(0xFFFF0000);
-                    Toast.makeText(getApplicationContext(),"Wrong Answer",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Wrong Answer",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -280,7 +282,28 @@ public class TaskCheck extends AppCompatActivity {
 
         String id =loginPreferences.getString("userid","");
 
-        db.updateScore(score,id);
+        boolean chkupdated = db.updateScore(score,id);
+        if (chkupdated = true) {
+
+            Cursor cursor=  db.viewScore(id);
+            StringBuilder stringBuilder=new StringBuilder();
+            final String[] arr2= new String[400];
+            int i=0;
+            while(cursor.moveToNext()){
+                //   stringBuilder.append(cursor.getString(2));
+
+                arr2[i] = cursor.getString(1);
+                i++;
+            }
+
+
+            Toast.makeText(getApplicationContext(),"updated "+ score+" "+ arr2[0],Toast.LENGTH_SHORT).show();
+
+
+        } else {
+            Toast.makeText(getApplicationContext(),"Not updated",Toast.LENGTH_SHORT).show();
+        }
+
 
 
     }
