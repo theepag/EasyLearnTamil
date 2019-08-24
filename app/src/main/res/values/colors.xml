@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="ColorWhite">#FFFFFF</color>
+    <color name="ColorWhiteTransparent"> #80ffffff</color>
+    <color name="colorPrimary">#B4ACAA</color>
+    <color name="colorPrimaryDark">#202F65</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="gradStart">#D0DDDF</color>
+    <color name="gradStop">#B4ACAA</color>
+    <color name="buttonBack">#3498DB</color>
+    <color name="bluedark">#2F333F</color>
+    <color name="bluelight">#49ACD5</color>
+    <color name="green">#45BC62</color>
+    <color name="orange">#EAAD43</color>
+    <color name="Dark">#2F333F</color>
+
+
+
+
+</resources>

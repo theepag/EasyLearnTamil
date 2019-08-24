@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">ahenam</string>
+    <string name="title_activity_login">Sign in</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <string name="title_activity_startscreen">StartscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_bottom_navigation">BottomNavigation</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="navigation_home">Home</string>
+    <string name="navigation_lessons">Lessons</string>
+    <string name="navigation_tasks">Tasks</string>
+    <string name="navigation_profile">Profile</string>
+    <string name="title_activity_bottom_navi">BottomNavi</string>
+    <string name="title_less">Lessons</string>
+    <string name="title_tasks">Tasks</string>
+    <string name="titile_profile">Profile</string>
+    <string name="title_lessons">Lessons</string>
+    <string name="titile_tasks">Tasks</string>
+    <string name="titile_highscores">Highscores</string>
+    <string name="titile_play">Play</string>
+    <string name="titile_TextView">TextView</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_bottom_nav">bottom_nav</string>
+    <string name="title_activity_sound">sound</string>
+</resources>

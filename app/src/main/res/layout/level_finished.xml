@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="350dp"
+    android:layout_height="270dp"
+    android:background="@color/Dark"
+    android:padding="5dp"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/congrats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:text="Congratulations !"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            app:fontFamily="sans-serif-condensed" />
+    </LinearLayout>
+
+
+
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="141dp"
+        android:layout_height="77dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/victory" />
+<android.support.v7.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:gravity="center">
+
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+
+        android:gravity="right"
+        android:text="Successfully completed"
+        android:textAllCaps="false"
+        android:textColor="@color/ColorWhite"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/levelname"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="7sp"
+        android:text=""
+        android:textColor="@color/ColorWhite"
+        android:textSize="18sp"
+        />
+</android.support.v7.widget.LinearLayoutCompat>
+
+
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_marginTop="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Continue" />
+
+</LinearLayout>

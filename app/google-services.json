@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "344622255963",
+    "firebase_url": "https://learntamil-2cf84.firebaseio.com",
+    "project_id": "learntamil-2cf84",
+    "storage_bucket": "learntamil-2cf84.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:344622255963:android:df22ebedafef81e5",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "344622255963-rfico0a26grho7bcvu1kg0ha4693c66m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapp",
+            "certificate_hash": "090d72384c8850875563c8164b62cc2693f09444"
+          }
+        },
+        {
+          "client_id": "344622255963-vu039pfpufu1cr7kpeonrahb32p2cjeg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC4JtvLd8PKMX4Ih-VdwAYW2zhw6kNrwk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "344622255963-vu039pfpufu1cr7kpeonrahb32p2cjeg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

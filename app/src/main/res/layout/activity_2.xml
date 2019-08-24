@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        style="@android:style/Widget.DeviceDefault.Light.ScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="480dp"
+        android:layout_marginBottom="35dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:visibility="visible">
+
+        <HorizontalScrollView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/b1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:text="அ"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/b2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:text="ஆ"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:text="இ"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:text="ஈ"
+                    android:textSize="30sp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:text="உ"
+                    android:textSize="30sp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:text="ஊ"
+                    android:textSize="30sp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:text="எ"
+                    android:textSize="30sp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:text="ஏ"
+                    android:textSize="30sp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:text="ஐ"
+                    android:textSize="30sp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:text="ஒ"
+                    android:textSize="30sp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:text="ஓ"
+                    android:textSize="30sp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:text="ஒள"
+                    android:textSize="30sp"/>
+
+            </LinearLayout>
+        </HorizontalScrollView>>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"/>
+
+</RelativeLayout>
