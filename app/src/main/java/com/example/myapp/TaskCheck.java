@@ -293,7 +293,7 @@ public class TaskCheck extends AppCompatActivity {
                 //   stringBuilder.append(cursor.getString(2));
 
                 arr2[i] = cursor.getString(1);
-                i++;
+                i= i+1;
             }
 
 
