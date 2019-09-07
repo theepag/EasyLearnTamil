@@ -84,6 +84,9 @@ public class SelectionActivity extends AppCompatActivity {
         startActivity(new Intent(this, SelectTask.class));
     }
 
+    public void toHighScore (View view) {
+        startActivity(new Intent(this, HighScore.class));
+    }
 
 
 

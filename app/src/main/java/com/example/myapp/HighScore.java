@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 public class HighScore extends AppCompatActivity {
     DatabaseHelper db;
-    TextView name_one,score_one,name_two,score_two;
+    TextView name_one,score_one,name_two,score_two,name_3,score_3,name_4,score_4,name_5,score_5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,14 @@ public class HighScore extends AppCompatActivity {
         name_two = findViewById(R.id.name_two);
         score_one = findViewById(R.id.score_one);
         score_two = findViewById(R.id.score_two);
+        name_3 = findViewById(R.id.name_3);
+        name_4 = findViewById(R.id.name_4);
+        name_5= findViewById(R.id.name_5);
+        score_3 = findViewById(R.id.score_3);
+        score_4 = findViewById(R.id.score_4);
+        score_5= findViewById(R.id.score_5);
+
+
 
 
         db=new DatabaseHelper(this);
@@ -98,6 +106,14 @@ public class HighScore extends AppCompatActivity {
         name_one.setText(String.valueOf(nameSorted[0]));
         score_two.setText(String.valueOf(total[2][0]));
         name_two.setText(String.valueOf(nameSorted[1]));
+        score_3.setText(String.valueOf(total[3][0]));
+        name_3.setText(String.valueOf(nameSorted[2]));
+        score_4.setText(String.valueOf(total[4][0]));
+        name_4.setText(String.valueOf(nameSorted[3]));
+        score_5.setText(String.valueOf(total[5][0]));
+        name_5.setText(String.valueOf(nameSorted[4]));
+
+
 
 
 

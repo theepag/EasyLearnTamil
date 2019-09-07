@@ -307,12 +307,43 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("level1", score);
-        contentValues.put("id",id);
-        String tbname ="score";
+       // contentValues.put("id",id);
+        long ins = db.update("score",contentValues,"id="+id,null);
+        if (ins == -1) return false;
+        else return true;
 
-        db.update(tbname,contentValues,"id=?", new String[]{id});
-        return true;
     }
+
+
+    public Cursor viewScore(String id) {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery("select * from score where id=?", new String[]{id});
+
+        return cursor;
+    }
+
+    public Cursor viewHighScore() {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery("select * from score", null);
+
+        return cursor;
+
+    }
+    public Cursor getUser() {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery("select * from users", null);
+
+        return cursor;
+
+    }
+
+
 
 
 }
