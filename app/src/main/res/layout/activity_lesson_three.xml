@@ -8,16 +8,26 @@
     tools:context=".LessonThree">
 
     <ListView
-        android:layout_height="wrap_content"
+        android:id="@+id/listView"
         android:layout_width="wrap_content"
-        android:id="@+id/listView"/>
+        android:layout_height="wrap_content"
+        android:divider="@color/white"
+        android:dividerHeight="1dp"
+        android:listSelector="#54BEEE"
+        android:textAlignment="center"/>
 
     <Button
         android:id="@+id/recordNow"
         android:layout_width="157dp"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/listView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_marginLeft="200dp"
         android:layout_marginTop="600dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginRight="29dp"
+        android:layout_marginBottom="18dp"
         android:background="@drawable/buttonshape"
         android:text="Let's Practice" />
 

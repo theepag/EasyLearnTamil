@@ -37,35 +37,43 @@ public class HighScore extends AppCompatActivity {
         final int[] level1= new int[400];
         final int[] level2= new int[400];
         final int[] level3= new int[400];
-        final int[][] total= new int[400][2];
+        final int[] total= new int[400];
+        final int[] id1 = new int [400];
 
         int i=0;
         int j=0;
         while(cursor.moveToNext()){
             //   stringBuilder.append(cursor.getString(2));
 
-
             level1[i] = cursor.getInt(1);
             level2[i] = cursor.getInt(2);
             level3[i] = cursor.getInt(3);
 
-            total[i][0] = level1[i] + level2[i] + level3[i];
-            total[i][1] = cursor.getInt(0);
-            i++;
+            total[i] = level1[i] + level2[i] + level3[i];
+            id1[i] = cursor.getInt(0);
 
+            i++;
         }
 
+
         int temp,temp2;
+
         for (int k =0; k < 400; k++) {
             for (int l = k+ 1; l < 400; l++ ) {
-                if (total[k][0] < total[l][0])
+                if (total[k] < total[l])
                 {
-                    temp = total[k][0];
-                    temp2 = total[k][1];
-                    total[k][0] = total[l][0];
-                    total[k][1] = total[l][1];
-                    total[l][0] = temp;
-                    total[l][1] = temp2;
+                    temp = total[k];
+                    total[k] = total[l];
+                    total[l] = temp;
+
+
+                    temp2 = id1[k];
+                    id1[k] = id1[l];
+                    id1[l] = temp2;
+
+
+
+
                 }
 
             }
@@ -84,17 +92,15 @@ public class HighScore extends AppCompatActivity {
 
             userID[z] = cursr.getInt(0);
             name[z] = cursr.getString(1);
-
             z++;
 
         }
         for (int a= 0; a < 400; a++) {
 
             for (int b= 0; b < 400; b++) {
-                if (total[a][1] == userID[b]) {
+                if (id1[a] == userID[b]) {
 
                     nameSorted[a] = name[b];
-
                 }
 
             }
@@ -102,9 +108,17 @@ public class HighScore extends AppCompatActivity {
         }
 
 
-        score_one.setText(String.valueOf(total[1][0]));
+        score_one.setText(String.valueOf(total[0]));
+      //  name_one.setText(String.valueOf(nameSorted[0]));
+        score_two.setText(String.valueOf(total[1]));
+        score_3.setText(String.valueOf(total[2]));
+        score_4.setText(String.valueOf(total[3]));
         name_one.setText(String.valueOf(nameSorted[0]));
-        score_two.setText(String.valueOf(total[2][0]));
+        name_two.setText(String.valueOf(nameSorted[1]));
+        name_3.setText(String.valueOf(nameSorted[2]));
+        name_4.setText(String.valueOf(nameSorted[3]));
+
+      /*
         name_two.setText(String.valueOf(nameSorted[1]));
         score_3.setText(String.valueOf(total[3][0]));
         name_3.setText(String.valueOf(nameSorted[2]));
@@ -112,17 +126,11 @@ public class HighScore extends AppCompatActivity {
         name_4.setText(String.valueOf(nameSorted[3]));
         score_5.setText(String.valueOf(total[5][0]));
         name_5.setText(String.valueOf(nameSorted[4]));
+*/
 
 
 
-
-
-
-
-
-
-
-      //  Toast.makeText(getApplicationContext(),"updated " +total[1][0]+" "+ nameSorted[0]+" "+ total[2][0]+ " "+nameSorted[1] ,Toast.LENGTH_SHORT).show();
+        //  Toast.makeText(getApplicationContext(),"updated " +total[1][0]+" "+ nameSorted[0]+" "+ total[2][0]+ " "+nameSorted[1] ,Toast.LENGTH_SHORT).show();
 
 
 

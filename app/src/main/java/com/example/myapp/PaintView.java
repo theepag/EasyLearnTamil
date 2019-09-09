@@ -70,7 +70,8 @@ public class PaintView extends View {
     }
 
     public void clearCanvas(){
-        mPath.reset ();
+        backgroundColor = DEFAULT_BG_COLOR;
+        paths.clear();
         invalidate ();
     }
 

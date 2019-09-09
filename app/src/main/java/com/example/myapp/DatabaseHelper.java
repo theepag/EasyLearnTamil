@@ -21,17 +21,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-         db.execSQL("create table users (id integer primary key autoincrement,name text,email text,username text,password text,llevel text)");
-         db.execSQL("create table txt (id integer primary key autoincrement,name text,type text,question text,hint text)");
-           db.execSQL("create table score (id integer primary key autoincrement,level1 integer default 0,level2 integer default 0, level3 integer default 0, total integer default 0)");
+        db.execSQL("create table users (id integer primary key autoincrement,name text,email text,username text,password text,llevel text)");
+        db.execSQL("create table txt (id integer primary key autoincrement,name text,type text,question text,hint text)");
+        db.execSQL("create table score (id integer primary key autoincrement,level1 integer default 0,level2 integer default 0, level3 integer default 0, total integer default 0)");
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
-            db.execSQL("drop table if exists users");
-          db.execSQL("drop table if exists txt");
+        db.execSQL("drop table if exists users");
+        db.execSQL("drop table if exists txt");
 
     }
 
@@ -304,15 +304,30 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return arrayList;
     }
     public boolean updateScore(int score, String id) {
+        String scoreStr = String.valueOf(score);
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("level1", score);
-       // contentValues.put("id",id);
+        contentValues.put("level1", scoreStr);
+        // contentValues.put("id",id);
         long ins = db.update("score",contentValues,"id="+id,null);
         if (ins == -1) return false;
         else return true;
 
     }
+
+    public boolean insertScore(int score,String id) {
+        String scoreStr = String.valueOf(score);
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("level1", scoreStr);
+        contentValues.put("id",id);
+        long ins = db.insert("score", null, contentValues);
+        if (ins == -1) return false;
+        else return true;
+
+
+    }
+
 
 
     public Cursor viewScore(String id) {
@@ -347,5 +362,3 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 }
-
-

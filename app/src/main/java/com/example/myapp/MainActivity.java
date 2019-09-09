@@ -20,6 +20,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
+
 public class MainActivity extends AppCompatActivity {
 
     ImageView bgapp, clover;
@@ -31,12 +33,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        
 
-}
-public void ToLogin (View view) {
+
+    }
+    public void ToLogin (View view) {
         startActivity(new Intent(this, LoginActivity.class));
-}
+    }
     public void ToRegister (View view) {
         startActivity(new Intent(this, RegisterActivity.class));
     }
@@ -47,12 +49,27 @@ public void ToLogin (View view) {
     private void finishQuiz() {
         Intent resultIntent = new Intent();
         //resultIntent.putExtra(EXTRA_SCORE, score);
-       // setResult(RESULT_OK, resultIntent);
+        // setResult(RESULT_OK, resultIntent);
         finish();
     }
 
     //to close the application
     public void onBackPressed() {
+        new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
+                .setTitleText("Are you sure want to EXIT?")
+                .setContentText("Close the Application!")
+                //
+                .setConfirmText("No")
+                .setCancelText("Yes,do it!")
+                .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                    @Override
+                    public void onClick(SweetAlertDialog sDialog) {
+
+                        sDialog.dismissWithAnimation();
+                        finish();
+                    }
+                })
+                .show();
         Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 // Vibrate for 500 milliseconds
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -61,12 +78,5 @@ public void ToLogin (View view) {
             //deprecated in API 26
             v.vibrate(500);
         }
-        if (backPressedTime + 2000 > System.currentTimeMillis()) {
-            finishQuiz();
-        } else {
-            Toast.makeText(this, "Press back again to exit the game!!!", Toast.LENGTH_SHORT).show();
-        }
-
-        backPressedTime = System.currentTimeMillis();
     }
 }

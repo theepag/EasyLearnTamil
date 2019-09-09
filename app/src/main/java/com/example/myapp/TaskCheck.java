@@ -280,29 +280,32 @@ public class TaskCheck extends AppCompatActivity {
     }
     public void updatescore(int score) {
 
-        String id =loginPreferences.getString("userid","");
-
-        boolean chkupdated = db.updateScore(score,id);
-        if (chkupdated = true) {
-
+            String id =loginPreferences.getString("userid","");
             Cursor cursor=  db.viewScore(id);
             StringBuilder stringBuilder=new StringBuilder();
             final String[] arr2= new String[400];
             int i=0;
+
             while(cursor.moveToNext()){
                 //   stringBuilder.append(cursor.getString(2));
 
                 arr2[i] = cursor.getString(1);
                 i= i+1;
+
             }
 
+            if (arr2[0] == null) {
 
-            Toast.makeText(getApplicationContext(),"updated "+ score+" "+ arr2[0],Toast.LENGTH_SHORT).show();
+                boolean chkinserted = db.insertScore(score,id);
 
 
-        } else {
-            Toast.makeText(getApplicationContext(),"Not updated",Toast.LENGTH_SHORT).show();
-        }
+
+            } else {
+
+                boolean chkupdated = db.updateScore(score,id);
+            }
+
+            Toast.makeText(getApplicationContext(),"updated "+ id+" "+ arr2[0] +" "+score,Toast.LENGTH_SHORT).show();
 
 
 

@@ -18,8 +18,6 @@ public class SelectionActivity extends AppCompatActivity {
     TextView textViewName;
     DatabaseHelper db;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

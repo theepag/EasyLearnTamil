@@ -21,12 +21,14 @@
         <activity android:name=".LessonThree" />
         <activity android:name=".TaskTwo" />
         <activity android:name=".SelectTask" />
-        <activity android:name=".SplashActivity">
+        <activity android:name=".splash_screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".WelcomeActivity">
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".months" />

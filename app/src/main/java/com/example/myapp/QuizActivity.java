@@ -21,6 +21,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Locale;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
+
+
 public class QuizActivity extends AppCompatActivity {
     public static final String EXTRA_SCORE = "extraScore";
     private static final long COUNTDOWN_IN_MILLIS = 30000;
@@ -192,7 +195,6 @@ public class QuizActivity extends AppCompatActivity {
 
     private void checkAnswer() {
         answered = true;
-
         countDownTimer.cancel();
 
         RadioButton rbSelected = findViewById(rbGroup.getCheckedRadioButtonId());
@@ -201,6 +203,25 @@ public class QuizActivity extends AppCompatActivity {
         if (answerNr == currentQuestion.getAnswerNr()) {
             score++;
             textViewScore.setText("Score: " + score);
+            new SweetAlertDialog(QuizActivity.this, SweetAlertDialog.SUCCESS_TYPE)
+                    .setTitleText("Good job!")
+                    .setContentText("Right Asswer")
+                    .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                        @Override
+                        public void onClick(SweetAlertDialog sweetAlertDialog) {
+                            //currentPosition ++;
+                            //setData();
+                            //answerEdt.setText("");
+                            sweetAlertDialog.dismiss();
+                        }
+                    })
+                    .show();
+            if (questionCounter<questionCountTotal) {
+                buttonConfirmNext.setText("Next");
+            } else {
+                buttonConfirmNext.setText("Finish");
+            }
+
         }else {
             Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 // Vibrate for 500 milliseconds
@@ -210,6 +231,22 @@ public class QuizActivity extends AppCompatActivity {
                 //deprecated in API 26
                 v.vibrate(500);
             }
+            new SweetAlertDialog(QuizActivity.this, SweetAlertDialog.ERROR_TYPE)
+                    .setTitleText("Wrong Answer")
+                    .setContentText("The right answer is : "+currentQuestion.getAnswerNr())
+                    .setConfirmText("OK")
+                    .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                        @Override
+                        public void onClick(SweetAlertDialog sDialog) {
+                            sDialog.dismiss();
+
+                            //currentPosition ++;
+
+                            //setData();
+                            //answerEdt.setText("");
+                        }
+                    })
+                    .show();
             showSolution();
         }
     }
@@ -234,7 +271,7 @@ public class QuizActivity extends AppCompatActivity {
                 break;
         }
 
-        if (questionCounter < questionCountTotal) {
+        if (questionCounter<questionCountTotal) {
             buttonConfirmNext.setText("Next");
         } else {
             buttonConfirmNext.setText("Finish");
@@ -253,17 +290,7 @@ public class QuizActivity extends AppCompatActivity {
         if (backPressedTime + 2000 > System.currentTimeMillis()) {
             finishQuiz();
         } else {
-            Toast.makeText(this, "Press back again to finish", Toast.LENGTH_SHORT).show();
-        }
-
-        backPressedTime = System.currentTimeMillis();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (countDownTimer != null) {
-            countDownTimer.cancel();
+            backPressedTime = System.currentTimeMillis();
         }
     }
 

@@ -28,7 +28,7 @@ public class Uyireluthu extends AppCompatActivity {
 
         myDB = new DatabaseHelper(this);
 
-        Button viewdata1 = (Button) findViewById(R.id.b1);
+        final Button viewdata1 = (Button) findViewById(R.id.b1);
 
         viewdata1.setOnClickListener ( new View.OnClickListener () {
             @Override
@@ -41,6 +41,7 @@ public class Uyireluthu extends AppCompatActivity {
                     stringBuilder.append ( cursor.getString ( 1 ) );
                 }
                 textView.setText ( stringBuilder );
+                viewdata1.performClick();
             }
         } );
 
