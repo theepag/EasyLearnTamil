@@ -1,63 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="@drawable/bgapps"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    tools:context=".LessonOne">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+        <include
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <RelativeLayout
-            android:layout_marginTop="70dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp">
 
-            <TextView
-                android:id="@+id/txtlevel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Learn Basic Letters"
-                android:textColor="#FFFFFF"
-                android:textSize="22sp" />
 
             <TextView
+                android:id="@+id/textViewName"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/txtlevel"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
                 android:layout_marginTop="10dp"
-                android:text="12 Items"
-                android:textColor="#52BAFF"
-                android:textSize="14sp"
-                android:visibility="invisible" />
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_toStartOf="@+id/btnLogout"
+                android:layout_toLeftOf="@+id/btnLogout"
+                android:gravity="right"
+                android:text="Learn Basic Letters"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp" />
 
 
         </RelativeLayout>
 
         <GridLayout
-            android:columnCount="1"
-            android:rowCount="3"
-            android:alignmentMode="alignMargins"
-            android:columnOrderPreserved="false"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:alignmentMode="alignMargins"
+            android:columnCount="1"
+            android:columnOrderPreserved="false"
+            android:rowCount="3">
 
             <android.support.v7.widget.CardView
-                android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
-                app:cardElevation="6dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
                 app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                app:cardElevation="6dp">
 
 
                 <LinearLayout
@@ -65,13 +69,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:padding="16dp"
-                    android:orientation="vertical">
+
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
                     <ImageView
                         android:layout_width="120dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/uyireluthu"/>
+                        android:src="@drawable/uyireluthu" />
 
                     <TextView
                         android:id="@+id/txt2"
@@ -80,16 +85,7 @@
                         android:layout_marginTop="12dp"
                         android:text="Vowels"
                         android:textColor="#6f6f6f"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/txt8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="உயிர் எழுத்துகள்"
-                        android:textColor="#6f6f6f"
-                        android:textSize="20dp"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
 
@@ -97,13 +93,13 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
-                app:cardElevation="6dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
                 app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                app:cardElevation="6dp">
 
 
                 <LinearLayout
@@ -111,13 +107,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:padding="16dp"
-                    android:orientation="vertical">
+
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
                     <ImageView
                         android:layout_width="120dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/meieluthu"/>
+                        android:background="@null"
+                        android:src="@drawable/meieluthu" />
 
                     <TextView
                         android:id="@+id/txt3"
@@ -126,29 +124,20 @@
                         android:layout_marginTop="12dp"
                         android:text="Consonants"
                         android:textColor="#6f6f6f"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/txt9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="மெய் எழுத்துகள்"
-                        android:textColor="#6f6f6f"
-                        android:textSize="20dp"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
-                app:cardElevation="6dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
                 app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                app:cardElevation="6dp">
 
 
                 <LinearLayout
@@ -156,8 +145,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:padding="16dp"
-                    android:orientation="vertical">
+
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
                     <ImageView
                         android:layout_width="150dp"
@@ -171,20 +161,17 @@
                         android:layout_marginTop="12dp"
                         android:text="Compounds"
                         android:textColor="#6f6f6f"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/txt10"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="உயிர்மெய் எழுத்துகள்"
-                        android:textColor="#6f6f6f"
-                        android:textSize="20dp"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
         </GridLayout>
+
+
     </LinearLayout>
-</ScrollView>
+</RelativeLayout>
+
+
+
+

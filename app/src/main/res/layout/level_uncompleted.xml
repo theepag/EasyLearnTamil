@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="5dp"
-            android:text="Level Uncompleted"
+            android:text="Level Incompleted"
             android:textColor="@color/white"
             android:textSize="36sp"
             app:fontFamily="sans-serif-condensed" />
@@ -55,6 +55,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
+        android:onClick="toTaskOne"
 
         android:text="PlayAgain" />
 

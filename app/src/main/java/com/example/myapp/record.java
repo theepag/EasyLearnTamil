@@ -10,11 +10,13 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
@@ -37,6 +39,17 @@ public class record extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_record );
+
+        Toolbar toolbar=findViewById(R.id.main_toolbar);
+        TextView toolbarTitle=findViewById(R.id.titleText);
+
+        toolbar.setTitle(" ");
+        toolbarTitle.setText("Text to Speech");
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
         mButtonSpeak = findViewById(R.id.button_speak);
 
         mTTS = new TextToSpeech(this, new TextToSpeech.OnInitListener() {

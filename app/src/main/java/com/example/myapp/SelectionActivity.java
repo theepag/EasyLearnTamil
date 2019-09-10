@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -22,6 +23,16 @@ public class SelectionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection);
+
+        Toolbar toolbar=findViewById(R.id.main_toolbar);
+        TextView toolbarTitle=findViewById(R.id.titleText);
+
+        toolbar.setTitle(" ");
+        toolbarTitle.setText("Home");
+
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         loginPreferences = getSharedPreferences("loginPrefs", Context.MODE_PRIVATE);
 

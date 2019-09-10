@@ -2,11 +2,13 @@ package com.example.myapp;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -35,6 +37,16 @@ public class TaskCheck extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_check);
+
+        Toolbar toolbar=findViewById(R.id.main_toolbar);
+        TextView toolbarTitle=findViewById(R.id.titleText);
+
+        toolbar.setTitle(" ");
+        toolbarTitle.setText("Home/Task/Task1");
+
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         db=new DatabaseHelper(this);
 
@@ -257,7 +269,7 @@ public class TaskCheck extends AppCompatActivity {
 
         Congra = findViewById(R.id.congrats);
 
-        level = findViewById(R.id.levelname);
+
 
         btnclk = (Button)findViewById(R.id.button4);
 
@@ -282,12 +294,10 @@ public class TaskCheck extends AppCompatActivity {
 
             String id =loginPreferences.getString("userid","");
             Cursor cursor=  db.viewScore(id);
-            StringBuilder stringBuilder=new StringBuilder();
             final String[] arr2= new String[400];
             int i=0;
 
             while(cursor.moveToNext()){
-                //   stringBuilder.append(cursor.getString(2));
 
                 arr2[i] = cursor.getString(1);
                 i= i+1;
@@ -297,7 +307,6 @@ public class TaskCheck extends AppCompatActivity {
             if (arr2[0] == null) {
 
                 boolean chkinserted = db.insertScore(score,id);
-
 
 
             } else {
@@ -310,4 +319,12 @@ public class TaskCheck extends AppCompatActivity {
 
 
     }
+
+    public void toTaskOne(View view) {
+        startActivity(new Intent(this, TaskCheck.class));
+    }
+    public void toTaskTwo(View view) {
+        startActivity(new Intent(this, TaskTwo.class));
+    }
+
 }

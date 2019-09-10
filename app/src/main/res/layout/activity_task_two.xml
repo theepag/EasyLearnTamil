@@ -4,8 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background1"
+    android:background="@drawable/grad_bg"
     tools:context=".TaskTwo">
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <ImageView
         android:layout_width="100dp"
@@ -18,14 +23,14 @@
         android:scaleType="fitCenter"/>
 
     <ImageView
-        android:id="@+id/imageView1"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:id="@+id/imageView1"
+        android:clickable="true"
         android:layout_marginLeft="200dp"
         android:layout_marginTop="216dp"
         android:layout_marginBottom="32dp"
-        android:clickable="true"
-        android:scaleType="fitCenter" />
+        android:scaleType="fitCenter"/>
 
     <ImageView
         android:layout_width="100dp"

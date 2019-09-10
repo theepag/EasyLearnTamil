@@ -1,8 +1,11 @@
 package com.example.myapp;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
+import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -10,6 +13,7 @@ import android.os.CountDownTimer;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -43,6 +47,7 @@ public class QuizActivity extends AppCompatActivity {
     private RadioButton rb2;
     private RadioButton rb3;
     private Button buttonConfirmNext;
+    Dialog level_finished;
 
     private ColorStateList textColorDefaultRb;
     private ColorStateList textColorDefaultCd;
@@ -59,12 +64,27 @@ public class QuizActivity extends AppCompatActivity {
     private boolean answered;
 
     private long backPressedTime;
+    DatabaseHelper db;
+    SharedPreferences loginPreferences;
+    SharedPreferences.Editor loginPrefsEditor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
+        loginPreferences = getSharedPreferences("loginPrefs", Context.MODE_PRIVATE);
+
+
+        Toolbar toolbar=findViewById(R.id.main_toolbar);
+        TextView toolbarTitle=findViewById(R.id.titleText);
+
+        toolbar.setTitle(" ");
+        toolbarTitle.setText("Home/Tasks/Task3");
+
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         textViewQuestion = findViewById(R.id.text_question);
         textViewScore = findViewById(R.id.text_view_score);
         textViewQuestionCount = findViewById(R.id.text_view_question_count);
@@ -201,7 +221,7 @@ public class QuizActivity extends AppCompatActivity {
         int answerNr = rbGroup.indexOfChild(rbSelected) + 1;
 
         if (answerNr == currentQuestion.getAnswerNr()) {
-            score++;
+            score +=10;
             textViewScore.setText("Score: " + score);
             new SweetAlertDialog(QuizActivity.this, SweetAlertDialog.SUCCESS_TYPE)
                     .setTitleText("Good job!")
@@ -282,7 +302,19 @@ public class QuizActivity extends AppCompatActivity {
         Intent resultIntent = new Intent();
         resultIntent.putExtra(EXTRA_SCORE, score);
         setResult(RESULT_OK, resultIntent);
+        updatescore(score);
+
+        if (score > 70) {
+            showSuccessMessage();
+        }
+
+        else {
+            showUncompletedMessage();
+        }
+
         finish();
+
+
     }
 
     @Override
@@ -303,4 +335,73 @@ public class QuizActivity extends AppCompatActivity {
         outState.putBoolean(KEY_ANSWERED, answered);
         outState.putParcelableArrayList(KEY_QUESTION_LIST, questionList);
     }
+
+    public void updatescore(int score) {
+
+        String id =loginPreferences.getString("userid","");
+        Toast.makeText(getApplicationContext(),"id , score "+ score +" "+id,Toast.LENGTH_SHORT).show();
+/*
+        Cursor cursor1=  db.viewScore(id);
+        final String[] arr2= new String[400];
+        int i=0;
+
+        while(cursor1.moveToNext()){
+
+            arr2[i] = cursor1.getString(2);
+            i= i+1;
+
+        }
+        Toast.makeText(getApplicationContext(),"stored  "+ arr2[0] +" ",Toast.LENGTH_SHORT).show();
+
+
+        if (arr2[0] == null) {
+
+            boolean chkinserted = db.insertScore3(score,id);
+
+
+        } else {
+
+            boolean chkupdated = db.updateScore3(score,id);
+        }
+
+        Toast.makeText(getApplicationContext(),"updated "+ id+" "+ arr2[0] +" "+score,Toast.LENGTH_SHORT).show();
+
+*/
+
+
+
+
+    }
+    public void toTaskThree(View view) {
+        startActivity(new Intent(this, QuizActivity.class));
+    }
+    public void toSelection(View view) {
+        startActivity(new Intent(this, SelectionActivity.class));
+    }
+
+    public void showSuccessMessage() {
+        TextView Congra,level;
+        Button btnclk;
+
+        Congra = findViewById(R.id.congrats);
+
+
+
+        btnclk = (Button)findViewById(R.id.button4);
+
+        level_finished.setContentView(R.layout.level_finished3);
+        level_finished.show();
+
+
+    }
+    public void showUncompletedMessage() {
+
+
+        level_finished.setContentView(R.layout.level_uncompleted3);
+        level_finished.show();
+
+
+
+    }
+
 }

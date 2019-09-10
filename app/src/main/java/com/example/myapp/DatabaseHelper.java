@@ -116,7 +116,63 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
-    public Cursor ViewData11() {
+    public Cursor ViewData6() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 6 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData7() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 7 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData8() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 8 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData9() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 9 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData10() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 10 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData011() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 11 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData12() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 12 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData21() {
         SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
 
         Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 14 ", null);
@@ -132,7 +188,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
-    public Cursor ViewData33() {
+    public Cursor ViewData23() {
         SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
 
         Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 16 ", null);
@@ -140,7 +196,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
-    public Cursor ViewData44() {
+    public Cursor ViewData24() {
         SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
 
         Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 17 ", null);
@@ -148,7 +204,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
-    public Cursor ViewData55() {
+    public Cursor ViewData25() {
         SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
 
         Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 18 ", null);
@@ -156,18 +212,250 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
-    public Cursor ViewData111() {
+    public Cursor ViewData26() {
         SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
 
-        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 14 ", null);
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 19 ", null);
 
         return cursor;
     }
 
-    public Cursor ViewData222() {
+    public Cursor ViewData27() {
         SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
 
-        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 16 ", null);
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 20 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData28() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 21 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData29() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 22 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData210() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 23 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData211() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 24 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData212() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 25 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData213() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 26 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData214() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 27 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData215() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 28 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData216() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 29 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData217() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 30 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData218() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 31 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData31() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 104 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData32() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 105 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData33() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 106 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData34() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 107 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData35() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 108 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData36() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 109 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData37() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 110 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData38() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 111 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData39() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 112 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData310() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 113 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData311() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 114 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData312() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 115 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData313() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 116 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData314() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 117 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData315() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 118 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData316() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 119 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData317() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 121 ", null);
+
+        return cursor;
+    }
+
+    public Cursor ViewData318() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from txt where id = 120 ", null);
 
         return cursor;
     }
@@ -314,6 +602,28 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else return true;
 
     }
+    public boolean updateScore2(int score, String id) {
+        String scoreStr = String.valueOf(score);
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("level2", scoreStr);
+        // contentValues.put("id",id);
+        long ins = db.update("score",contentValues,"id="+id,null);
+        if (ins == -1) return false;
+        else return true;
+
+    }
+    public boolean updateScore3(int score, String id) {
+        String scoreStr = String.valueOf(score);
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("level3", scoreStr);
+        // contentValues.put("id",id);
+        long ins = db.update("score",contentValues,"id="+id,null);
+        if (ins == -1) return false;
+        else return true;
+
+    }
 
     public boolean insertScore(int score,String id) {
         String scoreStr = String.valueOf(score);
@@ -355,6 +665,32 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery("select * from users", null);
 
         return cursor;
+
+    }
+
+    public boolean insertScore2(int score,String id) {
+        String scoreStr = String.valueOf(score);
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("level2", scoreStr);
+        contentValues.put("id",id);
+        long ins = db.insert("score", null, contentValues);
+        if (ins == -1) return false;
+        else return true;
+
+
+    }
+
+    public boolean insertScore3(int score,String id) {
+        String scoreStr = String.valueOf(score);
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("level3", scoreStr);
+        contentValues.put("id",id);
+        long ins = db.insert("score", null, contentValues);
+        if (ins == -1) return false;
+        else return true;
+
 
     }
 

@@ -65,42 +65,49 @@
                     android:textSize="30sp"/>
 
                 <Button
+                    android:id="@+id/b6"
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
                     android:text="ஊ"
                     android:textSize="30sp"/>
 
                 <Button
+                    android:id="@+id/b7"
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
                     android:text="எ"
                     android:textSize="30sp"/>
 
                 <Button
+                    android:id="@+id/b8"
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
                     android:text="ஏ"
                     android:textSize="30sp"/>
 
                 <Button
+                    android:id="@+id/b9"
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
                     android:text="ஐ"
                     android:textSize="30sp"/>
 
                 <Button
+                    android:id="@+id/b10"
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
                     android:text="ஒ"
                     android:textSize="30sp"/>
 
                 <Button
+                    android:id="@+id/b11"
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
                     android:text="ஓ"
                     android:textSize="30sp"/>
 
                 <Button
+                    android:id="@+id/b12"
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
                     android:text="ஒள"
@@ -114,9 +121,9 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="200dp"
+        android:textSize="250dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"/>
+        android:layout_marginTop="100dp"/>
 
     <Button
         android:id="@+id/button"
@@ -125,6 +132,17 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
         android:text="CLEAR"
-        android:textSize="30dp"
-        android:onClick="clearCanvas"/>
+        android:textSize="30dp"/>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="160dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="270dp"
+        app:srcCompat="@drawable/t"
+        tools:layout_editor_absoluteX="177dp"
+        android:onClick="playIT"
+        tools:layout_editor_absoluteY="289dp"/>
+
 </RelativeLayout>

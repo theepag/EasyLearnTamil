@@ -16,11 +16,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HighScore"></activity>
-        <activity android:name=".record" />
-        <activity android:name=".LessonThree" />
-        <activity android:name=".TaskTwo" />
-        <activity android:name=".SelectTask" />
+        <activity android:name=".Uyirmeieluthu"></activity>
+        <activity android:name=".Meieluthu" />
+        <activity android:name=".Uyireluthu" />
+        <activity
+            android:name=".HighScore"
+            android:parentActivityName=".SelectLesson" />
+        <activity
+            android:name=".record"
+            android:parentActivityName=".LessonThree" />
+        <activity
+            android:name=".LessonThree"
+            android:parentActivityName=".SelectionActivity" />
+        <activity
+            android:name=".TaskTwo"
+            android:parentActivityName=".SelectTask" />
+        <activity
+            android:name=".SelectTask"
+            android:parentActivityName=".SelectionActivity" />
         <activity android:name=".splash_screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,27 +41,51 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WelcomeActivity">
-        </activity>
+        <activity android:name=".WelcomeActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".months" />
-        <activity android:name=".days" />
-        <activity android:name=".fruits" />
-        <activity android:name=".colours" />
-        <activity android:name=".numbers" />
-        <activity android:name=".relation" />
-        <activity android:name=".LessonTwo" />
-        <activity android:name=".SelectLesson" />
+        <activity
+            android:name=".months"
+            android:parentActivityName=".LessonTwo" />
+        <activity
+            android:name=".days"
+            android:parentActivityName=".LessonTwo" />
+        <activity
+            android:name=".fruits"
+            android:parentActivityName=".LessonTwo" />
+        <activity
+            android:name=".colours"
+            android:parentActivityName=".LessonTwo" />
+        <activity
+            android:name=".numbers"
+            android:parentActivityName=".LessonTwo" />
+        <activity
+            android:name=".relation"
+            android:parentActivityName=".LessonTwo" />
+        <activity
+            android:name=".LessonTwo"
+            android:parentActivityName=".SelectionActivity" />
+        <activity
+            android:name=".SelectLesson"
+            android:parentActivityName=".SelectionActivity" />
         <activity android:name=".WelcomeScreen" />
-        <activity android:name=".TaskCheck" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".LessonOne" />
-        <activity android:name=".Uyireluthu" />
-        <activity android:name=".QuizActivity" />
-        <activity android:name=".Meieluthu" />
-        <activity android:name=".Uyirmeieluthu" />
-        <activity android:name=".SelectionActivity" />
+        <activity
+            android:name=".TaskCheck"
+            android:parentActivityName=".SelectTask" />
+        <activity
+            android:name=".RegisterActivity"
+            android:parentActivityName=".RegisterActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".LessonOne"
+            android:parentActivityName=".SelectLesson" />
+        <activity
+            android:name=".QuizActivity"
+            android:parentActivityName=".SelectTask" />
+        <activity
+            android:name=".SelectionActivity"
+            android:parentActivityName=".LoginActivity" />
     </application>
 
 </manifest>

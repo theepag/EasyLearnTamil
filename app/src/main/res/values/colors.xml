@@ -17,6 +17,7 @@
     <color name="bluelight">#49ACD5</color>
     <color name="green">#45BC62</color>
     <color name="orange">#EAAD43</color>
+    <color name="textColor">#ffffff</color>
     <color name="Dark">#2F333F</color>
     <color name="active_dots">#fffafa</color>
     <color name="inactive_dots">#83878b</color>

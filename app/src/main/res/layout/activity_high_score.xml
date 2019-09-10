@@ -7,6 +7,11 @@
     android:background="@drawable/background1"
     tools:context=".HighScore">
 
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
     <TextView
         android:id="@+id/name_5"
         android:layout_width="wrap_content"
@@ -16,7 +21,11 @@
         android:layout_marginTop="160dp"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
+        android:gravity="left"
         android:text="TextView"
+        android:textAlignment="gravity"
+        android:textSize="18sp"
+
         app:layout_constraintEnd_toStartOf="@+id/score_two"
         app:layout_constraintHorizontal_bias="0.942"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +38,10 @@
         android:layout_marginTop="160dp"
         android:layout_marginEnd="128dp"
         android:layout_marginRight="128dp"
+        android:gravity="left"
         android:text="TextView"
+        android:textAlignment="gravity"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/score_one" />
 
@@ -42,7 +54,11 @@
         android:layout_marginTop="120dp"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
+        android:gravity="left"
         android:text="TextView"
+        android:textAlignment="gravity"
+
+        android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/score_two"
         app:layout_constraintHorizontal_bias="0.967"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +71,10 @@
         android:layout_marginTop="120dp"
         android:layout_marginEnd="128dp"
         android:layout_marginRight="128dp"
+        android:gravity="left"
         android:text="TextView"
+        android:textSize="18sp"
+        android:textAlignment="gravity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/score_one" />
 
@@ -68,7 +87,11 @@
         android:layout_marginTop="72dp"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
+        android:gravity="left"
         android:text="TextView"
+        android:textAlignment="gravity"
+
+        android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/score_two"
         app:layout_constraintHorizontal_bias="0.967"
         app:layout_constraintStart_toStartOf="parent"
@@ -81,7 +104,11 @@
         android:layout_marginTop="72dp"
         android:layout_marginEnd="132dp"
         android:layout_marginRight="132dp"
+        android:gravity="left"
         android:text="TextView"
+        android:textAlignment="gravity"
+
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/score_one" />
 
@@ -99,6 +126,8 @@
         android:textSize="30sp"
         android:textStyle="bold"
         app:fontFamily="sans-serif"
+        android:textAlignment="gravity"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -114,9 +143,13 @@
         android:layout_marginTop="64dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:gravity="left"
         android:text="TextView"
+        android:textAlignment="gravity"
+
+        android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/score_one"
-        app:layout_constraintHorizontal_bias="0.787"
+        app:layout_constraintHorizontal_bias="0.725"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -129,7 +162,11 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
+        android:gravity="left"
         android:text="TextView"
+        android:textSize="18sp"
+        android:textAlignment="gravity"
+
         app:layout_constraintEnd_toStartOf="@+id/score_two"
         app:layout_constraintHorizontal_bias="0.967"
         app:layout_constraintStart_toStartOf="parent"
@@ -142,7 +179,11 @@
         android:layout_marginTop="64dp"
         android:layout_marginEnd="128dp"
         android:layout_marginRight="128dp"
+        android:gravity="left"
         android:text="TextView"
+        android:textSize="18sp"
+        android:textAlignment="gravity"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -153,7 +194,11 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="124dp"
         android:layout_marginRight="124dp"
+        android:gravity="left"
         android:text="TextView"
+        android:textAlignment="gravity"
+
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/score_one" />
 

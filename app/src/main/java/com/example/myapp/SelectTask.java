@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -22,13 +23,21 @@ public class SelectTask extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_task);
 
+        Toolbar toolbar=findViewById(R.id.main_toolbar);
+        TextView toolbarTitle=findViewById(R.id.titleText);
+
+        toolbar.setTitle(" ");
+        toolbarTitle.setText("Home/Tasks");
+
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         loginPreferences = getSharedPreferences("loginPrefs", Context.MODE_PRIVATE);
 
         user usr = new user();
 
         usr.name = loginPreferences.getString("username","");
-
-
 
 
         textViewName = (TextView)findViewById(R.id.textViewName);
@@ -56,7 +65,6 @@ public class SelectTask extends AppCompatActivity {
 
         }
     }
-
 
     public void toTaskOne(View view) {
         startActivity(new Intent(this, TaskCheck.class));

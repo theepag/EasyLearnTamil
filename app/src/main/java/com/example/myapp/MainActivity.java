@@ -43,9 +43,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, RegisterActivity.class));
     }
 
-    public void toLesson (View view) {
-        startActivity(new Intent(this, TaskCheck.class));
-    }
+
     private void finishQuiz() {
         Intent resultIntent = new Intent();
         //resultIntent.putExtra(EXTRA_SCORE, score);

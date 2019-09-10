@@ -3,6 +3,7 @@ package com.example.myapp;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,6 +16,16 @@ public class HighScore extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_high_score);
+
+        Toolbar toolbar=findViewById(R.id.main_toolbar);
+        TextView toolbarTitle=findViewById(R.id.titleText);
+
+        toolbar.setTitle(" ");
+        toolbarTitle.setText("Home/HighScore");
+
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         name_one = findViewById(R.id.name_one);
         name_two = findViewById(R.id.name_two);
@@ -117,6 +128,9 @@ public class HighScore extends AppCompatActivity {
         name_two.setText(String.valueOf(nameSorted[1]));
         name_3.setText(String.valueOf(nameSorted[2]));
         name_4.setText(String.valueOf(nameSorted[3]));
+        name_5.setText(String.valueOf(nameSorted[4]));
+        score_5.setText(String.valueOf(nameSorted[4]));
+
 
       /*
         name_two.setText(String.valueOf(nameSorted[1]));

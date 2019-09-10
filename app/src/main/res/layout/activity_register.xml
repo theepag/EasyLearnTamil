@@ -9,6 +9,10 @@
     android:background="@drawable/background1"
     android:gravity="center_horizontal">
 
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <ImageView
         android:id="@+id/imageView"
