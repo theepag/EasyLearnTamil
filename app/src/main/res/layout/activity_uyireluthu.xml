@@ -17,7 +17,7 @@
         style="@android:style/Widget.DeviceDefault.Light.ScrollView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="600dp"
         android:scrollbarStyle="outsideOverlay"
         android:visibility="visible">
 
@@ -136,13 +136,14 @@
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="160dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="26dp"
         android:layout_marginLeft="270dp"
         app:srcCompat="@drawable/t"
         tools:layout_editor_absoluteX="177dp"
         android:onClick="playIT"
+        android:scaleType="fitCenter"
         tools:layout_editor_absoluteY="289dp"/>
 
 </RelativeLayout>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout tools:context=".record"
+<LinearLayout tools:context=".record"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -17,19 +17,23 @@
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:textSize="30sp"
+        android:layout_marginTop="30dp"
         android:text="Record"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
     <Button
         android:id="@+id/btnStartRecord"
         android:layout_width="87dp"
+
         android:layout_height="40dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/buttonshape"
         android:text="Start" />
 
     <Button
         android:id="@+id/btnStopRecord"
         android:layout_width="116dp"
+        android:layout_marginTop="10dp"
         android:layout_height="44dp"
         android:background="@drawable/buttonshape"
         android:text="Stop Record" />
@@ -38,12 +42,14 @@
         android:layout_width="match_parent"
         android:layout_height="54dp"
         android:text="Play"
+        android:layout_marginTop="10dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="30sp" />
 
     <Button
         android:id="@+id/bynPlay"
         android:layout_width="98dp"
+        android:layout_marginTop="10dp"
         android:layout_height="48dp"
         android:background="@drawable/buttonshape"
         android:text="Play" />
@@ -52,6 +58,7 @@
         android:id="@+id/btnStop"
         android:layout_width="98dp"
         android:layout_height="45dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/buttonshape"
         android:text="Stop" />
 
@@ -105,5 +112,5 @@
         android:background="@drawable/buttonshape"
         android:enabled="false"
         android:text="Say it!"
-        android:textColor="@color/Dark"/>
+        android:textColor="@color/Dark" />
 </LinearLayout>

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +15,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class TaskCheck extends AppCompatActivity {
 
@@ -236,6 +239,10 @@ public class TaskCheck extends AppCompatActivity {
                 }
             }
         });
+        new SweetAlertDialog(this)
+                .setTitleText("Choose the correct letter by listening the pronunciation")
+                .setConfirmButtonBackgroundColor(Color.parseColor("#49ACD5"))
+                .show();
     }
     public void genRandom() {
         count +=1;

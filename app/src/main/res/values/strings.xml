@@ -39,28 +39,14 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_bottom_nav">bottom_nav</string>
     <string name="title_activity_sound">sound</string>
-
-    <!-- Slide 1 Title and Description -->
-    <string name="slide_1_title">bus tickets</string>
-    <string name="slide_1_desc">Explore the most attractive deal in bus ticket booking.</string>
-
-    <!-- Slide 2 Title and Description -->
-    <string name="slide_2_title">flight tickets</string>
-    <string name="slide_2_desc">Explore the most attractive deal in flight ticket booking.</string>
-
-    <!-- Slide 3 Title and Description -->
-    <string name="slide_3_title">train tickets</string>
-    <string name="slide_3_desc">Explore the most attractive deal in train ticket booking.</string>
-
-    <!-- Slide 4 Title and Description -->
-    <string name="slide_4_title">Movie tickets</string>
-    <string name="slide_4_desc">Explore the most attractive deal in your favourite movie ticket booking.</string>
-
     <string name="my_preference">"com.example.com.MyPref"</string>
+
     <string name="my_preference_key">"com.example.com.MyPrefKey"</string>
 
     <string name="app_intro_skip_button">[Translation for SKIP]</string>
+
     <string name="app_intro_next_button">[Translation for NEXT]</string>
+
     <string name="app_intro_start_button">[Translation for DONE]</string>
 
 

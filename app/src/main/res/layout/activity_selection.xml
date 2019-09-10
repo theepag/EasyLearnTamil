@@ -25,7 +25,7 @@
 
         <TextView
             android:id="@+id/textViewName"
-            android:layout_width="99dp"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
@@ -37,9 +37,9 @@
             android:layout_marginRight="1dp"
             android:layout_toStartOf="@+id/btnLogout"
             android:layout_toLeftOf="@+id/btnLogout"
+            android:gravity="right"
             android:textColor="#FFFFFF"
-            android:textSize="18dp"
-            android:gravity="right"/>
+            android:textSize="18dp" />
 
         <Button
             android:id="@+id/btnLogout"

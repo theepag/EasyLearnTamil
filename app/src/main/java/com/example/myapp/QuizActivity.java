@@ -199,14 +199,6 @@ public class QuizActivity extends AppCompatActivity {
         textViewCountDown.setText(timeFormatted);
 
         if (timeLeftInMillis < 10000) {
-            Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-// Vibrate for 500 milliseconds
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                v.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE));
-            } else {
-                //deprecated in API 26
-                v.vibrate(500);
-            }
             textViewCountDown.setTextColor(Color.RED);
         } else {
             textViewCountDown.setTextColor(textColorDefaultCd);
@@ -225,7 +217,8 @@ public class QuizActivity extends AppCompatActivity {
             textViewScore.setText("Score: " + score);
             new SweetAlertDialog(QuizActivity.this, SweetAlertDialog.SUCCESS_TYPE)
                     .setTitleText("Good job!")
-                    .setContentText("Right Asswer")
+                    .setContentText("Right Answer")
+                    .setConfirmButtonBackgroundColor(Color.parseColor("#49ACD5"))
                     .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                         @Override
                         public void onClick(SweetAlertDialog sweetAlertDialog) {
@@ -236,7 +229,7 @@ public class QuizActivity extends AppCompatActivity {
                         }
                     })
                     .show();
-            if (questionCounter<questionCountTotal) {
+            if (questionCounter < questionCountTotal) {
                 buttonConfirmNext.setText("Next");
             } else {
                 buttonConfirmNext.setText("Finish");
@@ -246,15 +239,18 @@ public class QuizActivity extends AppCompatActivity {
             Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 // Vibrate for 500 milliseconds
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                v.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE));
+                v.vibrate(VibrationEffect.createOneShot(200, VibrationEffect.DEFAULT_AMPLITUDE));
             } else {
                 //deprecated in API 26
-                v.vibrate(500);
+                v.vibrate(200);
             }
             new SweetAlertDialog(QuizActivity.this, SweetAlertDialog.ERROR_TYPE)
                     .setTitleText("Wrong Answer")
                     .setContentText("The right answer is : "+currentQuestion.getAnswerNr())
                     .setConfirmText("OK")
+                    .setConfirmButtonBackgroundColor(Color.parseColor("#49ACD5"))
+                    // pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
+
                     .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                         @Override
                         public void onClick(SweetAlertDialog sDialog) {
@@ -270,7 +266,6 @@ public class QuizActivity extends AppCompatActivity {
             showSolution();
         }
     }
-
     private void showSolution() {
         rb1.setTextColor(Color.RED);
         rb2.setTextColor(Color.RED);
@@ -298,29 +293,58 @@ public class QuizActivity extends AppCompatActivity {
         }
     }
 
-    private void finishQuiz() {
+    private void finishQuiz(){
+        Intent resultIntent = new Intent();
+        resultIntent.putExtra(EXTRA_SCORE,score);
+        setResult(RESULT_OK,resultIntent);
+        if (score>=70){
+            new SweetAlertDialog(this, SweetAlertDialog.CUSTOM_IMAGE_TYPE)
+                    .setTitleText("Congrats")
+                    .setCustomImage(R.drawable.victory)
+                    //.setCustomImage()
+                    .setContentText("Successfully Completed")
+                    .setConfirmButtonBackgroundColor(Color.parseColor("#49ACD5"))
+                    .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                        @Override
+                        public void onClick(SweetAlertDialog sDialog) {
+
+                            sDialog.dismissWithAnimation();
+                            finish();
+                        }
+                    })
+                    .show();
+        }
+        else {
+            //showUncompletedMessage();
+            new SweetAlertDialog(this, SweetAlertDialog.CUSTOM_IMAGE_TYPE)
+                    .setTitleText("Level Incompleted")
+                    .setCustomImage(R.drawable.tryagain)
+                    //.setCustomImage()
+                    .setContentText("You should have score above 70")
+                    .setConfirmButtonBackgroundColor(Color.parseColor("#49ACD5"))
+                    .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                        @Override
+                        public void onClick(SweetAlertDialog sDialog) {
+
+                            sDialog.dismissWithAnimation();
+                            finish();
+                        }
+                    })
+                    .show();
+        }
+        updatescore(score);
+    }
+    private void finishQuiz1() {
         Intent resultIntent = new Intent();
         resultIntent.putExtra(EXTRA_SCORE, score);
         setResult(RESULT_OK, resultIntent);
-        updatescore(score);
-
-        if (score > 70) {
-            showSuccessMessage();
-        }
-
-        else {
-            showUncompletedMessage();
-        }
-
         finish();
-
-
     }
 
     @Override
     public void onBackPressed() {
         if (backPressedTime + 2000 > System.currentTimeMillis()) {
-            finishQuiz();
+            finishQuiz1();
         } else {
             backPressedTime = System.currentTimeMillis();
         }

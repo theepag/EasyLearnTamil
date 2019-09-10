@@ -24,7 +24,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("create table users (id integer primary key autoincrement,name text,email text,username text,password text,llevel text)");
         db.execSQL("create table txt (id integer primary key autoincrement,name text,type text,question text,hint text)");
         db.execSQL("create table score (id integer primary key autoincrement,level1 integer default 0,level2 integer default 0, level3 integer default 0, total integer default 0)");
-
+        db.execSQL("create table QuestionsTable(id integer primary key autoincrement,question TEXT,option1 TEXT,option2 TEXT,option3 TEXT,answer_nr INTEGER)");
     }
 
     @Override
@@ -32,7 +32,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.execSQL("drop table if exists users");
         db.execSQL("drop table if exists txt");
-
+        db.execSQL("drop table if exists QuestionTable");
     }
 
     public boolean insert(String name, String email, String username, String password) {
@@ -692,6 +692,26 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else return true;
 
 
+    }
+    public ArrayList<Question> getQuestion() {
+        ArrayList<Question> questionsList = new ArrayList<>();
+        db = getReadableDatabase();
+        Cursor c = db.rawQuery("SELECT * FROM " + QuizContract.QuestionsTable.TABLE_NAME, null);
+
+        if (c.moveToFirst()) {
+            do {
+                Question question = new Question();
+                question.setQuestion(c.getString(c.getColumnIndex(QuizContract.QuestionsTable.COLUMN_QUESTION)));
+                question.setOption1(c.getString(c.getColumnIndex(QuizContract.QuestionsTable.COLUMN_OPTION1)));
+                question.setOption2(c.getString(c.getColumnIndex(QuizContract.QuestionsTable.COLUMN_OPTION2)));
+                question.setOption3(c.getString(c.getColumnIndex(QuizContract.QuestionsTable.COLUMN_OPTION3)));
+                question.setAnswerNr(c.getInt(c.getColumnIndex(QuizContract.QuestionsTable.COLUMN_ANSWER_NR)));
+                questionsList.add(question);
+            } while (c.moveToNext());
+        }
+
+        c.close();
+        return questionsList;
     }
 
 

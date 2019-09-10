@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
@@ -19,7 +20,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
-
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,21 +33,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        
 
-
-    }
-    public void ToLogin (View view) {
+}
+public void ToLogin (View view) {
         startActivity(new Intent(this, LoginActivity.class));
-    }
+}
     public void ToRegister (View view) {
         startActivity(new Intent(this, RegisterActivity.class));
     }
 
-
+    public void toLesson (View view) {
+        startActivity(new Intent(this, TaskCheck.class));
+    }
     private void finishQuiz() {
         Intent resultIntent = new Intent();
         //resultIntent.putExtra(EXTRA_SCORE, score);
-        // setResult(RESULT_OK, resultIntent);
+       // setResult(RESULT_OK, resultIntent);
         finish();
     }
 
@@ -56,8 +58,9 @@ public class MainActivity extends AppCompatActivity {
         new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
                 .setTitleText("Are you sure want to EXIT?")
                 .setContentText("Close the Application!")
-                //
+               //
                 .setConfirmText("No")
+                .setConfirmButtonBackgroundColor(Color.parseColor("#49ACD5"))
                 .setCancelText("Yes,do it!")
                 .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
                     @Override

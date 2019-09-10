@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
@@ -20,6 +21,8 @@ import com.example.myapp.R;
 
 import java.util.Arrays;
 import java.util.Collections;
+
+import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class TaskTwo extends AppCompatActivity {
 
@@ -173,6 +176,10 @@ public class TaskTwo extends AppCompatActivity {
                 showRandomFact ();
             }
         } );
+        new SweetAlertDialog(this)
+                .setTitleText("Choose the correct picture of the given word")
+                .setConfirmButtonBackgroundColor(Color.parseColor("#49ACD5"))
+                .show();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)

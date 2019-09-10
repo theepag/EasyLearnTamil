@@ -60,7 +60,7 @@ public class SelectionActivity extends AppCompatActivity {
         logout = (Button)findViewById(R.id.btnLogout);
         intentLogin = new Intent(SelectionActivity.this,LoginActivity.class);
 
-        textViewName.setText(usr.id);
+        textViewName.setText(loginPreferences.getString("username",""));
 
         logout.setOnClickListener(new View.OnClickListener() {
 
