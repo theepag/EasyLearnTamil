@@ -307,12 +307,11 @@ public class QuizActivity extends AppCompatActivity {
                     .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                         @Override
                         public void onClick(SweetAlertDialog sDialog) {
-
                             sDialog.dismissWithAnimation();
                             finish();
                         }
-                    })
-                    .show();
+                    });
+                    //.show();
         }
         else {
             //showUncompletedMessage();
@@ -329,8 +328,8 @@ public class QuizActivity extends AppCompatActivity {
                             sDialog.dismissWithAnimation();
                             finish();
                         }
-                    })
-                    .show();
+                    });
+                  //  .show();
         }
         updatescore(score);
     }

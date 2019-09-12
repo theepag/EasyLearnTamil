@@ -1,6 +1,7 @@
 package com.example.myapp;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -10,6 +11,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+
+import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class LessonThree extends AppCompatActivity {
     DatabaseHelper databaseHelper;
@@ -45,6 +48,12 @@ public class LessonThree extends AppCompatActivity {
         } );
         arrayList=new ArrayList<>(  );
         loadDatainListView();
+
+        new SweetAlertDialog(this)
+                .setTitleText("Here you can able to learn day to day dialogues ")
+                .setConfirmButtonBackgroundColor(Color.parseColor("#49ACD5"))
+                .show();
+
     }
 
     private void loadDatainListView() {

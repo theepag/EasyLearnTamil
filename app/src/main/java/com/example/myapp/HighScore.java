@@ -129,7 +129,7 @@ public class HighScore extends AppCompatActivity {
         name_3.setText(String.valueOf(nameSorted[2]));
         name_4.setText(String.valueOf(nameSorted[3]));
         name_5.setText(String.valueOf(nameSorted[4]));
-        score_5.setText(String.valueOf(nameSorted[4]));
+        score_5.setText(String.valueOf(total[4]));
 
 
       /*

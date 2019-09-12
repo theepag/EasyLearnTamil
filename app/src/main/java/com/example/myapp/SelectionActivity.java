@@ -46,8 +46,11 @@ public class SelectionActivity extends AppCompatActivity {
 
         while(cursor.moveToNext()){
             usr.email= cursor.getString(2);
-            usr.last_level= cursor.getInt(5);
+            usr.level1= cursor.getInt(5);
             usr.id = cursor.getString(0);
+            usr.level2= cursor.getInt(2);
+            usr.level3=cursor.getInt(3);
+
 
         }
 

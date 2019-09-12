@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class QuizDbHelper extends SQLiteOpenHelper {
     // Database Name
-    private static final String DATABASE_NAME = "MyAwesomeQuiz.db";
+    private static final String DATABASE_NAME = "tamil.db";
     // Database Version
     private static final int DATABASE_VERSION = 1;
 
@@ -47,25 +47,25 @@ public class QuizDbHelper extends SQLiteOpenHelper {
     }
 
     private void fillQuestionsTable() {
-        Question q1 = new Question("அ_மா", "ம்", "ன்", "து ", 1);
+        Question q1 = new Question("உங்கள் பெயர் ___?", "என்ன", "எவ்வளவு", "எத்தனை", 1);
         addQuestion(q1);
-        Question q2 = new Question("அ_பா ", "து ", "ப்", "சி", 2);
+        Question q2 = new Question("எப்படி __க்கின்றீர்கள்", "விறு", "இரு", "சிறு", 2);
         addQuestion(q2);
-        Question q3 = new Question("த_பி ", "A", "B", "ம்", 3);
+        Question q3 = new Question("கா_ வணக்கம்", "ளை", "ழை", "லை", 3);
         addQuestion(q3);
-        Question q4 = new Question("தங்_ ", "A", "கை", "வு", 2);
+        Question q4 = new Question("__வும் நன்றி", "சிக", "மிக", "வு", 2);
         addQuestion(q4);
-        Question q5 = new Question("_மா ", "மா", "B", "வு", 1);
+        Question q5 = new Question("_மா ", "மா", "லா", "கா", 1);
         addQuestion(q5);
-        Question q6 = new Question("மா_", "மி", "B", "வு", 1);
+        Question q6 = new Question("__காலையில் எழுங்கள்", "அதி", "சதி", "விதி", 1);
         addQuestion(q6);
-        Question q7 = new Question("சித்த_பா", "A", "B", "ப்", 3);
+        Question q7 = new Question("சித்த_பா", "ன்", "த்", "ப்", 3);
         addQuestion(q7);
-        Question q8 = new Question("த்தி ", "A", "B", "சி", 3);
+        Question q8 = new Question("___ செய்யுங்கள் ", "விதவி", "குதவி", "உதவி", 3);
         addQuestion(q8);
-        Question q9 = new Question("மச்_ன் ", "A", "சா", "வு", 2);
+        Question q9 = new Question("மச்_ன் ", "கா", "சா", "மா", 2);
         addQuestion(q9);
-        Question q10 = new Question("கட_ள்", "A", "B", "வு", 3);
+        Question q10 = new Question("இந்த நாள் ___ நாளாக அமையட்டும்", "மோசமான", "நாசமான", "இனிய", 3);
         addQuestion(q10);
 
     }

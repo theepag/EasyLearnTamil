@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/titleText"
         android:textSize="15dp"
+        android:textColor="@color/white"
         style="@style/Widget.Support.CoordinatorLayout"/>
 
 

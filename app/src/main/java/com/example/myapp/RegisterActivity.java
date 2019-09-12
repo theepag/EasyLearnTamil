@@ -70,6 +70,9 @@ public class RegisterActivity extends AppCompatActivity {
                             Boolean insert = db.insert(s1, s2, s3, s4);
                             if (insert == true) {
                                 Toast.makeText(getApplicationContext(), "Registered Success", Toast.LENGTH_LONG).show();
+                                Intent i=new Intent(RegisterActivity.this,LoginActivity.class);
+                                startActivity(i);
+
                             }
                         } else {
                             Toast.makeText(getApplicationContext(), "Username Already Exist", Toast.LENGTH_LONG).show();

@@ -16,13 +16,13 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="21dp"
         android:layout_marginEnd="8dp"
-        android:gravity="center"
-
         android:layout_marginRight="8dp"
+
         android:layout_marginBottom="40dp"
-
-
         android:background="@drawable/buttonshape"
+
+
+        android:gravity="center"
         android:onClick="ToRegister"
         android:shadowColor="#6F5BA8"
         android:shadowDx="0"
@@ -35,7 +35,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.9" />
 
     <TextView
         android:id="@+id/textView"
@@ -51,7 +51,7 @@
 
         app:fontFamily="sans-serif-medium"
         app:layout_constraintEnd_toStartOf="@+id/textView2"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.956"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -60,8 +60,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginRight="72dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
         android:text="Easily."
         android:textAllCaps="false"
         android:textColor="#24A0ED"
@@ -94,34 +94,37 @@
         android:layout_height="18dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginTop="118dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="72dp"
-        android:text="Company XYZ ©® "
+        android:layout_marginBottom="84dp"
         android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Company XYZ ©® "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        android:gravity="center"/>
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="288dp"
-        android:layout_height="263dp"
+        android:layout_width="339dp"
+        android:layout_height="291dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="57dp"
-        android:gravity="center"
         android:background="@null"
+        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.357"
         app:srcCompat="@drawable/axz" />
 
     <Button
@@ -130,11 +133,11 @@
         android:layout_height="43dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="468dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:gravity="center"
         android:background="@drawable/buttonshape"
+        android:gravity="center"
         android:onClick="ToLogin"
         android:shadowColor="#6F5BA8"
 

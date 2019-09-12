@@ -2,6 +2,7 @@ package com.example.myapp;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class LessonOne extends AppCompatActivity {
 
@@ -56,6 +59,11 @@ public class LessonOne extends AppCompatActivity {
                 openActivity4();
             }
         } );
+
+        new SweetAlertDialog(this)
+                .setTitleText("Here you can able to    practice writing and listening pronunciation of the letters ")
+                .setConfirmButtonBackgroundColor(Color.parseColor("#49ACD5"))
+                .show();
     }
 
     public void openActivity2(){

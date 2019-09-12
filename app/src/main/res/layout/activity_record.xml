@@ -113,4 +113,5 @@
         android:enabled="false"
         android:text="Say it!"
         android:textColor="@color/Dark" />
+
 </LinearLayout>

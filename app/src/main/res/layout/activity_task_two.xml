@@ -13,18 +13,18 @@
         android:layout_height="wrap_content"/>
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:id="@+id/imageView"
         android:clickable="true"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="50dp"
         android:layout_marginTop="216dp"
         android:layout_marginBottom="32dp"
         android:scaleType="fitCenter"/>
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:id="@+id/imageView1"
         android:clickable="true"
         android:layout_marginLeft="200dp"
@@ -33,22 +33,22 @@
         android:scaleType="fitCenter"/>
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:id="@+id/imageView2"
         android:clickable="true"
         android:layout_marginLeft="200dp"
-        android:layout_marginTop="316dp"
+        android:layout_marginTop="366dp"
         android:layout_marginBottom="32dp"
         android:scaleType="fitCenter"/>
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:id="@+id/imageView3"
         android:clickable="true"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="316dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="366dp"
         android:layout_marginBottom="32dp"
         android:scaleType="fitCenter"/>
 
@@ -63,13 +63,14 @@
         android:padding="8dp"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/factButton"
+        android:layout_width="186dp"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="500dp"
-        android:textSize="18dp"
-        android:text="Next" />
+        android:layout_marginTop="560dp"
+        android:background="@drawable/buttonshape"
+        android:text="Next"
+        android:textSize="18dp" />
 
     <TextView
         android:layout_width="wrap_content"

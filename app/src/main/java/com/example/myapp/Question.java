@@ -3,7 +3,7 @@ package com.example.myapp;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class Question implements Parcelable {
+public class Question implements Parcelable{
     private String question;
     private String option1;
     private String option2;

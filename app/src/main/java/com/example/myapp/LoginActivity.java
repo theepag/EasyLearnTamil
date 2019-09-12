@@ -97,7 +97,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 }
                 else{
-                    Toast.makeText(getApplicationContext(),"Something wrong",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Password incorrect !",Toast.LENGTH_LONG).show();
                 }
             }
         });

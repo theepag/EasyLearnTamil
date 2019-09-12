@@ -1,6 +1,7 @@
 package com.example.myapp;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -8,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class LessonTwo extends AppCompatActivity {
     LinearLayout l1;
@@ -85,5 +88,11 @@ public class LessonTwo extends AppCompatActivity {
                 startActivity(intent);
             }
         } );
+
+        new SweetAlertDialog(this)
+                .setTitleText("Here you can able to learn simple words ")
+                .setConfirmButtonBackgroundColor(Color.parseColor("#49ACD5"))
+                .show();
+
     }
 }
