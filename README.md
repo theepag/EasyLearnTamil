@@ -36,3 +36,4 @@ A Tamil Language learning Android application
 ## High Score Screen
 
 <img src="./app/src/main/res/drawable/Screens/hightscore.jpeg" alt="drawing" width="300"/>
+
